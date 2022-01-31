@@ -6,15 +6,14 @@
 </a>
 -->
 
+##
+
+<h1><p align="center">Beginner Python Projects</p>
 <p align="center">
   <img src="https://img.shields.io/badge/Version-0.2-brightgreen?style=for-the-badge">
-  
-  <img src="https://img.shields.io/github/license/MBlais13/beginner-python-projects?style=for-the-badge">
-  
+  <img src="https://img.shields.io/github/license/MBlais13/beginner-python-projects?style=for-the-badge">  
   <img src="https://img.shields.io/github/stars/MBlais13/beginner-python-projects?color=yellow&style=for-the-badge">
-  
-  <img src="https://img.shields.io/github/issues/MBlais13/beginner-python-projects?color=red&style=for-the-badge">
-  
+  <img src="https://img.shields.io/github/issues/MBlais13/beginner-python-projects?color=red&style=for-the-badge">  
   <img src="https://img.shields.io/github/forks/MBlais13/beginner-python-projects?color=blue&style=for-the-badge">
 </p>
 
@@ -24,9 +23,9 @@
   <!--<img src="https://img.shields.io/badge/Written%20In-Nothing-cyan?style=flat-square">--!>
 </p>
 
-##
+</h1>
 
-<h1><p align="center">Beginner Python Projects</p></h1>
+
 
 <p align="center">This is a bunch of my beginner python projects. Feel free to have a look around and use some of the code.</p>
 
