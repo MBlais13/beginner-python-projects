@@ -42,7 +42,7 @@ All the code in this repo is under the `MIT License`, so feel free to use the co
 
 
 ## Dependencies
-> Dependencies are on a file by file basis. `Some files may not have a requirements.txt or a readme.md `. 
+> Dependencies are on a file by file basis. `Some files may not have a requirements.txt or a readme.md so make sure to check the code!`. 
 
 
 # <!--used as a divider -->
