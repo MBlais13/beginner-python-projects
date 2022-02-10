@@ -36,7 +36,7 @@ current_time = datetime.now().date()
 config_student_number = '35101896'
 #config_student_dob = '2000-00-00'   # your date of birth - must be correct or you will get an error
 config_student_dob = '2005-09-13'
-DiscordWebhookURL = ''    # if you do not wish to use a discord webhook use 'na'
+DiscordWebhookURL = 'na'    # if you do not wish to use a discord webhook use 'na'
 
 # get the webdriver you want to use.
 browser = webdriver.Firefox(executable_path=r'Content\CovidAssessmentBot\webdrivers\geckodriver.exe')
