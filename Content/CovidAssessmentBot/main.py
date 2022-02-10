@@ -17,6 +17,8 @@ from selenium.common.exceptions import TimeoutException
 from datetime import date, datetime
 from time import strftime
 import time
+# screenshot page success.
+from PIL import Image
 # requests for sending discord webhooks
 import requests
 
@@ -37,7 +39,7 @@ config_student_dob = '2005-09-13'
 DiscordWebhookURL = 'https://discord.com/api/webhooks/925981240358744076/Rot9AwPMNKyQAL7rxkCDDJ1l9ASkL4SQ3FuvxpZU9fvg4_uimFKHoxcVBP7lAacvhvep'    # if you do not wish to use a discord webhook use 'na'
 
 # get the webdriver you want to use.
-browser = webdriver.Firefox(executable_path=r'.\webdrivers\geckodriver.exe')
+browser = webdriver.Firefox(executable_path=r'Content\CovidAssessmentBot\webdrivers\geckodriver.exe')
 browser.get('https://covid-assessment.publicboard.ca/')
 browser.implicitly_wait(10)
 
@@ -63,15 +65,15 @@ try: # page 1   - selection
         dob_input.send_keys(config_student_dob)
 
         try: # page 3   - verify
-            verify_button = browser.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[2]/div[3]/input')
+            #verify_button = browser.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[2]/div[3]/input')
             verify_button = WebDriverWait(browser, 5).until(lambda x: x.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[2]/div[3]/input'))  # waits
             if verify_button.is_displayed() == True:
                 verify_button.click()
             else:
-                print('this means the button is not visible')
+                print('verify button is not visible')
 
-            error_message = browser.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[2]/div[4]')
-            #error_message = WebDriverWait(browser, 5).until(lambda x: x.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[2]/div[4]'))  # waits
+            #error_message = browser.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[2]/div[4]')
+            error_message = WebDriverWait(browser, 5).until(lambda x: x.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[2]/div[4]'))  # waits
             if error_message.is_displayed() == False: # if not visible
                 print('error is not visible')
                 try: # page 4   - confirm
@@ -80,6 +82,9 @@ try: # page 1   - selection
                     
                     print('the covid assessment has been submitted.')
                     surveysent = True
+                    browser.save_screenshot('ss.png')
+                    screenshot = Image.open('ss.png')
+                    screenshot.show()
                 except:
                     print('failed confirm') 
                     errorcount = errorcount + 1
