@@ -10,7 +10,6 @@
 
 <h1><p align="center">Beginner Python Projects</p>
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-0.2-brightgreen?style=for-the-badge">
   <img src="https://img.shields.io/github/license/MBlais13/beginner-python-projects?style=for-the-badge">  
   <img src="https://img.shields.io/github/stars/MBlais13/beginner-python-projects?color=yellow&style=for-the-badge">
   <img src="https://img.shields.io/github/issues/MBlais13/beginner-python-projects?color=red&style=for-the-badge">  
